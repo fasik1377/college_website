@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="Register at Debub Ethiopia College - Join our community of learners and start your educational journey.">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <title>Student Registration - Debub Ethiopia College</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+    <style>
+        /* Registration Form Styling */
+        .registration-form {
+            background-color: #0c1228;
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #f5a425;
+            box-shadow: 0 0 0 0.2rem rgba(245, 164, 37, 0.25);
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-section-title {
+            color: #f5a425;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5a425;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: #1a2342;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: #f5a425;
+        }
+
+        .program-card.selected {
+            border-color: #f5a425;
+            background: rgba(245, 164, 37, 0.1);
+        }
+
+        .program-card h5 {
+            color: #f5a425;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin: 40px 0;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background: #1a2342;
+        }
+
+        .progress-bar {
+            background: #f5a425;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .step {
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        .step.active {
+            color: #f5a425;
+            font-weight: 600;
+        }
+
+        /* File Upload */
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload-btn {
+            border: 2px dashed #f5a425;
+            color: #f5a425;
+            background-color: transparent;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .file-upload input[type=file] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+                .btn-custom {
+    background-color: #f5a425;       
+    color: black;                   
+    border: none;                   
+    border-radius: 24px;             
+    padding: 10px 20px;             
+    font-weight: bold;              
+    transition: 0.3s ease-in-out;   
+}
+
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Summary Section */
+        .summary-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Terms and Conditions */
+        .terms-box {
+            max-height: 200px;
+            overflow-y: auto;
+            background: #1a2342;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .registration-form {
+                padding: 20px;
+            }
+
+            .step {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--header-->
+    <header class="main-header clearfix" role="header">
+        <div class="logo">
+            <a href="index.html"><em>Debub</em> Ethiopia</a>
+        </div>
+        <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav" role="navigation">
+            <ul class="main-menu">
+                <li><a href="index.html#section1">Home</a></li>
+                <li class="has-submenu"><a href="index.html#section2">About Us</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html#who-we-are">Who we are?</a></li>
+                        <li><a href="index.html#what-we-do">What we do?</a></li>
+                        <li><a href="index.html#how-it-works">How it works?</a></li>
+                    </ul>
+                </li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <section class="section main-banner" id="top" data-section="section1">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/course-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>Begin Your Educational Journey With Us</h6>
+                <h2><em>Student</em> Registration</h2>
+                <div class="main-button">
+                    <div class="scroll-to-section"><a href="#registration-form">Start Registration</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Registration Section Start ***** -->
+    <section class="section" data-section="section6" style="background-color: #0c1228;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Student Registration</h2>
+                        <p>Join our community of learners. Fill out the form below to begin your application process.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="row">
+                <div class="col-md-12 progress-container">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="step-indicator">
+                        <div class="step active" data-step="1">Personal Info</div>
+                        <div class="step" data-step="2">Program Selection</div>
+                        <div class="step" data-step="3">Documents</div>
+                        <div class="step" data-step="4">Review & Submit</div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="registrationForm">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step" id="step1">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="registration-form">
+                                <h3 class="form-section-title">Personal Information</h3>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="dob">Date of Birth *</label>
+                                            <input type="date" class="form-control" id="dob" name="dob" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="gender">Gender *</label>
+                                            <select class="form-control" id="gender" name="gender" required>
+                                                <option value="">Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="address">Address *</label>
+                                    <input type="text" class="form-control" id="address" name="address" required>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="city">City *</label>
+                                            <input type="text" class="form-control" id="city" name="city" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="country">Country *</label>
+                                            <input type="text" class="form-control" id="country" name="country"
+                                                value="Ethiopia" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-right mt-4">
+                                    <button type="button" class="btn btn-custom next-step" data-next="2">Next: Program
+                                        Selection</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Program Selection -->
+                <div class="form-step" id="step2" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="registration-form">
+                                <h3 class="form-section-title">Program Selection</h3>
+                                <p>Select your desired program of study:</p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="program-card" data-program="computer-science">
+                                            <h5>Computer Science</h5>
+                                            <p>Bachelor's Degree in Computer Science and Technology</p>
+                                            <p><strong>Duration:</strong> 4 years</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="program-card" data-program="business">
+                                            <h5>Business Administration</h5>
+                                            <p>Bachelor's Degree in Business Administration</p>
+                                            <p><strong>Duration:</strong> 4 years</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="program-card" data-program="engineering">
+                                            <h5>Engineering</h5>
+                                            <p>Bachelor's Degree in various Engineering fields</p>
+                                            <p><strong>Duration:</strong> 5 years</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="program-card" data-program="health">
+                                            <h5>Health Sciences</h5>
+                                            <p>Programs in Nursing, Public Health, and Medicine</p>
+                                            <p><strong>Duration:</strong> 4-6 years</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" id="selectedProgram" name="program" required>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="studyType">Study Type *</label>
+                                            <select class="form-control" id="studyType" name="studyType" required>
+                                                <option value="">Select Study Type</option>
+                                                <option value="full-time">Full Time</option>
+                                                <option value="part-time">Part Time</option>
+                                                <option value="online">Online</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="startDate">Preferred Start Date *</label>
+                                            <input type="month" class="form-control" id="startDate" name="startDate"
+                                                required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-primary prev-step"
+                                        data-prev="1">Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="3">Next:
+                                        Documents</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Document Upload -->
+                <div class="form-step" id="step3" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="registration-form">
+                                <h3 class="form-section-title">Required Documents</h3>
+                                <p>Please upload the following documents to complete your application:</p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>High School Certificate *</label>
+                                            <div class="file-upload">
+                                                <div class="file-upload-btn">
+                                                    <i class="fa fa-upload"></i> Choose File
+                                                </div>
+                                                <input type="file" id="certificate" name="certificate"
+                                                    accept=".pdf,.jpg,.jpeg,.png" required>
+                                            </div>
+                                            <div class="file-name" id="certificateName">No file chosen</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Identification Document *</label>
+                                            <div class="file-upload">
+                                                <div class="file-upload-btn">
+                                                    <i class="fa fa-upload"></i> Choose File
+                                                </div>
+                                                <input type="file" id="idDocument" name="idDocument"
+                                                    accept=".pdf,.jpg,.jpeg,.png" required>
+                                            </div>
+                                            <div class="file-name" id="idDocumentName">No file chosen</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Photograph (Passport Size) *</label>
+                                            <div class="file-upload">
+                                                <div class="file-upload-btn">
+                                                    <i class="fa fa-upload"></i> Choose File
+                                                </div>
+                                                <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png"
+                                                    required>
+                                            </div>
+                                            <div class="file-name" id="photoName">No file chosen</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Additional Documents (Optional)</label>
+                                            <div class="file-upload">
+                                                <div class="file-upload-btn">
+                                                    <i class="fa fa-upload"></i> Choose File
+                                                </div>
+                                                <input type="file" id="additionalDocs" name="additionalDocs"
+                                                    accept=".pdf,.jpg,.jpeg,.png">
+                                            </div>
+                                            <div class="file-name" id="additionalDocsName">No file chosen</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-primary prev-step"
+                                        data-prev="2">Previous</button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="4">Next: Review &
+                                        Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review and Submit -->
+                <div class="form-step" id="step4" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="registration-form">
+                                <h3 class="form-section-title">Review Your Information</h3>
+                                <p>Please review your information before submitting your application.</p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Personal Information</h5>
+                                        <div class="summary-item">
+                                            <strong>Name:</strong> <span id="reviewName"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Email:</strong> <span id="reviewEmail"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Phone:</strong> <span id="reviewPhone"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Date of Birth:</strong> <span id="reviewDob"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Address:</strong> <span id="reviewAddress"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h5>Program Information</h5>
+                                        <div class="summary-item">
+                                            <strong>Program:</strong> <span id="reviewProgram"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Study Type:</strong> <span id="reviewStudyType"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Start Date:</strong> <span id="reviewStartDate"></span>
+                                        </div>
+
+                                        <h5 class="mt-4">Documents</h5>
+                                        <div class="summary-item">
+                                            <strong>Certificate:</strong> <span id="reviewCertificate"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>ID Document:</strong> <span id="reviewIdDocument"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <strong>Photo:</strong> <span id="reviewPhoto"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mt-4">
+                                    <div class="terms-box">
+                                        <h5>Terms and Conditions</h5>
+                                        <p>By submitting this application, I certify that all information provided is
+                                            true and complete to the best of my knowledge. I understand that providing
+                                            false or incomplete information may result in denial of admission or
+                                            termination of enrollment.</p>
+                                        <p>I authorize Debub Ethiopia College to verify the information provided in this
+                                            application and to obtain any additional information needed to process my
+                                            application from relevant institutions or individuals.</p>
+                                        <p>I understand that I am responsible for paying all applicable tuition and fees
+                                            according to the payment schedule established by the College.</p>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">I agree to the terms and
+                                            conditions *</label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="button" class="btn btn-outline-primary prev-step"
+                                        data-prev="3">Previous</button>
+                                    <button type="submit" class="btn btn-success">Submit Application</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Success Message (Initially Hidden) -->
+            <div class="row mt-5" id="successMessage" style="display: none;">
+                <div class="col-md-12">
+                    <div class="alert alert-success text-center">
+                        <h4><i class="fa fa-check-circle"></i> Application Submitted Successfully!</h4>
+                        <p>Thank you for applying to Debub Ethiopia College. We have received your application and will
+                            review it shortly.</p>
+                        <p>You will receive a confirmation email with your application reference number within 24 hours.
+                        </p>
+                        <a href="index.html" class="btn btn-primary mt-3">Return to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Registration Section End ***** -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><i class="fa fa-copyright"></i> Copyright 2025 by Debub Ethiopia
+                        | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
+                        Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Program selection
+            $('.program-card').click(function () {
+                $('.program-card').removeClass('selected');
+                $(this).addClass('selected');
+                $('#selectedProgram').val($(this).data('program'));
+            });
+
+            // File upload name display
+            $('input[type="file"]').change(function () {
+                var fileName = $(this).val().split('\\').pop();
+                var fieldId = $(this).attr('id') + 'Name';
+                $('#' + fieldId).text(fileName || 'No file chosen');
+            });
+
+            // Step navigation
+            $('.next-step').click(function () {
+                var currentStep = $(this).closest('.form-step');
+                var nextStepId = $(this).data('next');
+
+                // Validate current step before proceeding
+                var valid = true;
+                currentStep.find('input[required], select[required]').each(function () {
+                    if ($(this).val() === '') {
+                        valid = false;
+                        $(this).addClass('is-invalid');
+                    } else {
+                        $(this).removeClass('is-invalid');
+                    }
+                });
+
+                // Special validation for program selection
+                if (nextStepId === 3 && $('#selectedProgram').val() === '') {
+                    valid = false;
+                    alert('Please select a program');
+                }
+
+                if (valid) {
+                    // Update progress bar
+                    var progressPercentage = (nextStepId / 4) * 100;
+                    $('.progress-bar').css('width', progressPercentage + '%');
+
+                    // Update step indicators
+                    $('.step').removeClass('active');
+                    $('.step[data-step="' + nextStepId + '"]').addClass('active');
+
+                    // Show next step
+                    currentStep.hide();
+                    $('#step' + nextStepId).show();
+
+                    // If moving to review step, populate review fields
+                    if (nextStepId === 4) {
+                        populateReviewFields();
+                    }
+                }
+            });
+
+            $('.prev-step').click(function () {
+                var currentStep = $(this).closest('.form-step');
+                var prevStepId = $(this).data('prev');
+
+                // Update progress bar
+                var progressPercentage = ((prevStepId - 1) / 4) * 100;
+                $('.progress-bar').css('width', progressPercentage + '%');
+
+                // Update step indicators
+                $('.step').removeClass('active');
+                $('.step[data-step="' + prevStepId + '"]').addClass('active');
+
+                // Show previous step
+                currentStep.hide();
+                $('#step' + prevStepId).show();
+            });
+
+            // Populate review fields
+            function populateReviewFields() {
+                $('#reviewName').text($('#firstName').val() + ' ' + $('#lastName').val());
+                $('#reviewEmail').text($('#email').val());
+                $('#reviewPhone').text($('#phone').val());
+                $('#reviewDob').text($('#dob').val());
+                $('#reviewAddress').text($('#address').val() + ', ' + $('#city').val() + ', ' + $('#country').val());
+
+                // Get program name from selected card
+                var programName = $('.program-card.selected h5').text();
+                $('#reviewProgram').text(programName);
+
+                $('#reviewStudyType').text($('#studyType').find('option:selected').text());
+                $('#reviewStartDate').text($('#startDate').val());
+
+                $('#reviewCertificate').text($('#certificate').val() ? $('#certificate').val().split('\\').pop() : 'Not uploaded');
+                $('#reviewIdDocument').text($('#idDocument').val() ? $('#idDocument').val().split('\\').pop() : 'Not uploaded');
+                $('#reviewPhoto').text($('#photo').val() ? $('#photo').val().split('\\').pop() : 'Not uploaded');
+            }
+
+            // Form submission
+            $('#registrationForm').submit(function (e) {
+                e.preventDefault();
+
+                // Validate terms agreement
+                if (!$('#agreeTerms').is(':checked')) {
+                    alert('You must agree to the terms and conditions');
+                    return;
+                }
+
+                // Simulate form submission
+                $('.form-step').hide();
+                $('#successMessage').show();
+
+                // In a real application, you would send the form data to a server here
+                // For this example, we're just showing a success message
+            });
+        });
+    </script>
+</body>
+
+</html>
