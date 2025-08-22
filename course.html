@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore the academic programs and courses offered at Debub Ethiopia College">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+        rel="stylesheet">
+
+    <title>Academic Programs - Debub Ethiopia College</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+        
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0c1228;
+            --accent-color: #f5a425;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        /* Main Banner Styling */
+        .main-banner {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(12, 18, 40, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Program Cards Styling */
+        .program-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(225, 255, 255, 0.15);
+        }
+
+        .program-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .program-body {
+            padding: 20px;
+        }
+
+        .program-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        /* Category Filter */
+        .category-filter {
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            margin: 5px;
+            border-radius: 20px;
+            padding: 8px 20px;
+        }
+
+        /* Course Details Modal */
+        .modal-content {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--light-color);
+            padding: 60px 0;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(rgba(12, 18, 40, 0.8), rgba(12, 18, 40, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Program List */
+        .program-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .program-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .program-list li:last-child {
+            border-bottom: none;
+        }
+
+        .program-list li i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-heading h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--header-->
+    <header class="main-header clearfix" role="header">
+        <div class="logo">
+            <a href="#"><em>Debub</em> Ethiopia</a>
+        </div>
+        <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav" role="navigation">
+            <ul class="main-menu">
+                <li><a href="#section1">Home</a></li>
+                <li class="has-submenu"><a href="#section2">About Us</a>
+                    <ul class="sub-menu">
+                        <li><a href="#who-we-are">Who we are?</a></li>
+                        <li><a href="#what-we-do">What we do?</a></li>
+                        <li><a href="#how-it-works">How it works?</a></li>
+                    </ul>
+                </li>
+                <li><a href="course.html">Courses</a></li>
+                <!-- <li><a href="#section5">Video</a></li> -->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://templatemo.com" class="external">External</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <section class="section main-banner" id="top" data-section="section1">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/images/course-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay header-text">
+            <div class="caption">
+                <h6>Academic Programs at Debub Ethiopia College</h6>
+                <h2><em>Explore Our</em> Courses</h2>
+                <div class="main-button">
+                    <div class="scroll-to-section"><a href="#programs">Discover Programs</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Programs Section Start ***** -->
+    <section class="section programs" id="programs" data-section="section2" style="background-color: #0c1228;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2 style="color:#f5a425">Our Academic Programs</h2>
+                        <p>Choose from a wide range of programs designed to prepare you for success in today's
+                            competitive world</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="row">
+                <div class="col-md-12 text-center category-filter">
+                    <button class="btn btn-outline-primary category-btn active" data-filter="all">All Programs</button>
+                    <button class="btn btn-outline-primary category-btn" data-filter="business">Business</button>
+                    <button class="btn btn-outline-primary category-btn" data-filter="technology">Technology</button>
+                    <button class="btn btn-outline-primary category-btn" data-filter="health">Health Sciences</button>
+                    <button class="btn btn-outline-primary category-btn" data-filter="education">Education</button>
+                    <button class="btn btn-outline-primary category-btn" data-filter="arts">Arts & Humanities</button>
+                </div>
+            </div>
+
+            <!-- Programs Grid -->
+            <div class="row">
+                <!-- Business Programs -->
+                <div class="col-md-4 program-item" data-category="business">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Business Administration</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Develop strategic thinking and leadership skills for today's global business environment.
+                            </p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3" data-bs-toggle="modal"
+                                data-bs-target="#businessModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 program-item" data-category="business">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h4>Accounting & Finance</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Master financial principles and accounting practices for corporate and public sectors.
+                            </p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technology Programs -->
+                <div class="col-md-4 program-item" data-category="technology">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>Computer Science</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Learn programming, software development, and cutting-edge technologies.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 program-item" data-category="technology">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4>Information Technology</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Focus on networking, systems administration, and IT infrastructure management.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Sciences Programs -->
+                <div class="col-md-4 program-item" data-category="health">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h4>Nursing</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Prepare for a rewarding career in healthcare with our comprehensive nursing program.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 program-item" data-category="health">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <h4>Pharmacy</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Study pharmaceutical sciences and prepare for a career in healthcare and research.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 5 Years</li>
+                                <li><i class="fas fa-users"></i> 150 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Programs -->
+                <div class="col-md-4 program-item" data-category="education">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h4>Education</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Become an effective educator with our comprehensive teacher preparation program.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arts & Humanities Programs -->
+                <div class="col-md-4 program-item" data-category="arts">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>Fine Arts</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Develop your creative talents and artistic expression across various media.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 program-item" data-category="arts">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <div class="program-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>English Literature</h4>
+                        </div>
+                        <div class="program-body">
+                            <p>Explore literary traditions and develop critical thinking and communication skills.</p>
+                            <ul class="program-list">
+                                <li><i class="fas fa-graduation-cap"></i> Bachelor's Degree</li>
+                                <li><i class="fas fa-clock"></i> 4 Years</li>
+                                <li><i class="fas fa-users"></i> 120 Credits</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Programs Section End ***** -->
+
+    <!-- ***** Features Section Start ***** -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Why Choose Our Programs</h2>
+                        <p>We provide exceptional educational experiences that prepare students for success</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>Expert Faculty</h4>
+                        <p>Learn from experienced professors and industry professionals who are dedicated to your
+                            success.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </div>
+                        <h4>Modern Facilities</h4>
+                        <p>Access state-of-the-art laboratories, libraries, and learning spaces equipped with the latest
+                            technology.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Industry Connections</h4>
+                        <p>Benefit from our strong partnerships with leading companies and organizations for internships
+                            and employment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Section End ***** -->
+
+    <!-- ***** Testimonials Section Start ***** -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>What Our Students Say</h2>
+                        <p>Hear from our graduates about their experiences in our programs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"The Business Administration program gave me the practical skills and confidence to start
+                                my own company right after graduation. The faculty mentorship was invaluable."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Michael Teshome</h5>
+                            <p>Business Administration Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"As a Computer Science student, I had access to cutting-edge technology and opportunities
+                                to work on real-world projects that prepared me for my career at a leading tech firm."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Selamawit Abebe</h5>
+                            <p>Computer Science Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            <p>"The Nursing program provided both the theoretical knowledge and hands-on clinical
+                                experience I needed to excel in my healthcare career. The supportive learning
+                                environment was exceptional."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h5>Hanna Girma</h5>
+                            <p>Nursing Graduate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials Section End ***** -->
+
+    <!-- ***** CTA Section Start ***** -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h2>Ready to Start Your Educational Journey?</h2>
+                    <p>Join thousands of students who have transformed their lives through education at Debub Ethiopia
+                        College</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** CTA Section End ***** -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p><i class="fa fa-copyright"></i> Copyright 2025 by Debub Ethiopia
+                        | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a><br>
+                        Distributed By: <a href="https://themewagon.com" rel="sponsored" target="_blank">ThemeWagon</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Program Detail Modals -->
+    <div class="modal fade" id="businessModal" tabindex="-1" aria-labelledby="businessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="businessModalLabel">Business Administration Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Program Overview</h4>
+                    <p>Our Business Administration program provides students with a comprehensive understanding of
+                        business principles and practices. The curriculum covers areas such as management, marketing,
+                        finance, accounting, and entrepreneurship.</p>
+
+                    <h4>Career Opportunities</h4>
+                    <ul>
+                        <li>Business Manager</li>
+                        <li>Marketing Specialist</li>
+                        <li>Financial Analyst</li>
+                        <li>Entrepreneur</li>
+                        <li>Human Resources Manager</li>
+                    </ul>
+
+                    <h4>Program Requirements</h4>
+                    <p>To graduate with a Bachelor's degree in Business Administration, students must complete 120
+                        credit hours, including general education requirements, core business courses, and elective
+                        courses in their area of interest.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Request Information</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Category filter functionality
+            $('.category-btn').click(function () {
+                // Remove active class from all buttons
+                $('.category-btn').removeClass('active');
+                // Add active class to clicked button
+                $(this).addClass('active');
+
+                // Get filter value
+                var filter = $(this).data('filter');
+
+                // Show all programs if "all" is selected
+                if (filter === 'all') {
+                    $('.program-item').show();
+                } else {
+                    // Hide all programs
+                    $('.program-item').hide();
+                    // Show programs with matching category
+                    $('.program-item[data-category="' + filter + '"]').show();
+                }
+            });
+
+            // Smooth scrolling for navigation
+            $('a[href*="#"]').on('click', function (e) {
+                e.preventDefault();
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top - 70,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>
