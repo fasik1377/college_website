@@ -408,7 +408,7 @@ section.features .col-4 {
   width: 100%;
 }
 
-.features-content {
+.features-content, .contact-page {
   position: absolute;
   bottom: 0;
   left: 0;
